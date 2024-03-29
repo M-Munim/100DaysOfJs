@@ -11,7 +11,7 @@ const findlongestword = (str) => {
   }
   // // spliting string to array
   strArr = str.split(" ")
-  
+
   // strArr = strArr.sort((a, b) => a.length - b.length);
   strArr = strArr.sort((a, b) => b.length - a.length);
   // return strArr.at(-1)
