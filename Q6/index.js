@@ -2,7 +2,8 @@ const isPalindrome = (str) => {
   str = str.toLowerCase().replace(/\W/g, "");
 
   let revStr = str.split("").reverse().join("")
-  console.log(revStr);
+  // console.log(revStr);
+  // console.log(str);
   return str === revStr ? true : false;
 }
 

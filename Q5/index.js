@@ -7,6 +7,6 @@
 
 let sortAscendingTwo = (arr) => {
   // return arr.sort((a, b) => a - b);
-  return arr.sort((a, b) => b - a);
+  return arr.sort((a, b)=> a - b);
 }
 console.log(sortAscendingTwo([5, 3, 2, 1, 100, 200, 4, 6, 7]));
