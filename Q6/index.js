@@ -1,3 +1,5 @@
+// Write a function to determine whether a given string is a palindrome or not
+
 const isPalindrome = (str) => {
   str = str.toLowerCase().replace(/\W/g, "");
 

@@ -1,3 +1,6 @@
+/*
+Implement a function that generates a hashtag from a given input string dot.*/
+
 let generateHash = (str) => {
   if (str.length > 280 || str.trim().length === 0) {
     return false;

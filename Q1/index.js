@@ -1,7 +1,6 @@
 // LONGEST WORD IN A STRING
 
-// Q: WRITE A FUNCT findlongestword THAT TAKES A STRING AS 
-
+// Q: Write a function that takes a string as input and returns the longest word in the string, if there are multiple longest words return the first one encountered
 
 // 1st Method:
 
