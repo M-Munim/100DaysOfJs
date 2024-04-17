@@ -1,31 +1,14 @@
-// Write a function to convert a string to camelCase $ snake_case.
+// A function to reverse a str without using any built-in methods or libraries. The function should take a string as input and return the reversed string.
 
+const reverseStr = (str) => {
+  // return str.split('').reverse().join(''); //built in
 
-// const toCamelCase = (str) => {
-//   return str.trim().split(' ').map((currElem, i) => {
-//     if (i === 0) {
-//       return currElem.toLowerCase();
-//     } else {
-//       return currElem.charAt(0).toUpperCase() + currElem.slice(1).toLowerCase();
-//     }
-//   }).join('');
-// }
-
-// // EX:
-
-// console.log(toCamelCase('hi i am a software engineer'));
-
-
-// Snake Case
-
-
-const toSnakeCase = (str) => {
-  return str.trim().split(' ').map((currElem, i) => {
-    return `${currElem}_`;
-
-  }).join('');
+  let revStr = "";
+  for (let i = str.length - 1; i >= 0; i--) {
+    revStr += str[i];
+  }
+  return revStr;
 }
 
 // EX:
-
-console.log(toSnakeCase('hi i am a software engineer'));
+console.log(reverseStr('hello'));

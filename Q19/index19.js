@@ -1,31 +1,20 @@
-// Write a function to convert a string to camelCase $ snake_case.
+// Write a function to check if a given string starts with a specific substring.
 
 
-// const toCamelCase = (str) => {
-//   return str.trim().split(' ').map((currElem, i) => {
-//     if (i === 0) {
-//       return currElem.toLowerCase();
-//     } else {
-//       return currElem.charAt(0).toUpperCase() + currElem.slice(1).toLowerCase();
-//     }
-//   }).join('');
-// }
+// Input:
+/*
+  str: A string (e.g. 'Hello World').
+  subStr: A subStr to check if it starts the given string (e.g ,'Hello') 
+  OutPut: True if the given str  starts with the specified subString, otherwise false.
+*/
 
-// // EX:
+const startsWith = (str, subStr) => {
+  // return str.toLowerCase().startsWith(subStr.toLowerCase()); //ONE 
+  return str.toLowerCase().slice(0, subStr.length) === subStr.toLowerCase();
 
-// console.log(toCamelCase('hi i am a software engineer'));
-
-
-// Snake Case
-
-
-const toSnakeCase = (str) => {
-  return str.trim().split(' ').map((currElem, i) => {
-    return `${currElem}_`;
-
-  }).join('');
 }
 
-// EX:
 
-console.log(toSnakeCase('hi i am a software engineer'));
+// Ex:
+console.log(startsWith('Hello World', 'Hello'));
+console.log(startsWith('Hello World', 'World'));
