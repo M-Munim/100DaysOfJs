@@ -1,24 +1,28 @@
-// Write a func that takes an array of numbers as input and returns the median value. If the array has an even number of elements, return the average of the two middle values.
+//write a  function called Findmode that takes an array of numbers as input and returns the array (the number that appears most frequently)
 
-// EX: Median of 3,3,5,,9,15 is 5. If there is an even number, then there is no single middle value; the median is then usually defined to be the mean of the two middle values; so the median of 3,5,7,9 is (5+7)/2 = 6.
+function findMode(arr) {
 
+  let count = {};
+  let maxNum = 0;
+  let mode;
 
-const findMedian = (arr) => {
-  arr.sort((a, b) => a - b);
-  // console.log(arr)
+  // Iterate through each element in the input array
+  for (const elem of arr) {
 
-  let length = arr.length;
-  let mid = Math.floor(length / 2);
+    // Increment the count of the current element in the count object
+    count[elem] = (count[elem] || 0) + 1;
 
-  // console.log(mid);
-  if (length % 2 === 0) {
-    return (arr[mid] + arr[mid - 1]) / 2;
-  } else {
-    return arr[mid];
+    // Check if the count of the current element is greater than the maximum count so far
+    if (count[elem] > maxNum) {
+
+      // If yes, update the maximum count and the mode
+      maxNum = count[elem];
+      mode = elem;
+    }
   }
-}
+  console.log(count);
+  return mode;
+};
 
 
-console.log(findMedian([5, 3, 1, 9, 7]));
-console.log(findMedian([10, 8, 6, 4, 2]));
-console.log(findMedian([2, 55, 4, 5, 3, 1, 9, 7]));
+console.log(findMode([2, 3, 5, 2, 3, 4, 6, 2, 1, 2]));
